@@ -1,3 +1,10 @@
 == Mock Browser
 
-HTMLで作成されたモックを表示します
+HTMLで作成されたモックを表示
+
+== 使い方
+
+> rails c
+src = File.expand_path("~/tmp/html")
+dst = "#{Rails.root}/public/mocknb"
+`ln -s #{src} #{dst}`

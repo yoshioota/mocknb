@@ -1,0 +1,12 @@
+<select id="path" size="<%= @paths.size %>" name="path" style="float: left; width: 150px; height: 1000px;">
+  <%= @paths.each_with_index do |path, idx| %>
+    <% if idx.zero? %>
+    <option value="<%= path %>" selected="selected"><%= File.basename(path) %></option>
+    <% else %>
+    <option value="<%= path %>"><%= File.basename(path) %></option>
+    <% end %>
+  <% end %>
+</select>
+
+<iframe id="if" src="javascript:void(0)" height="1000" width="1100" style="float: left;">
+</iframe>
